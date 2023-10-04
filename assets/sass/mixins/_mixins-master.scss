@@ -15,6 +15,16 @@
     vertical-align: top;
 }
 
+@mixin xxl-down {
+    @media screen and (max-width: 1399px) {
+        @content;
+    } 
+}
+@mixin xl-down {
+    @media screen and (max-width: 1199px) {
+        @content;
+    } 
+}
 @mixin lg-down {
     @media screen and (max-width: 991px) {
         @content;

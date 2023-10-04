@@ -1,0 +1,20 @@
+.hero {
+    height: 70rem;
+    background-color: black;
+    background-size: cover;
+    background-position: bottom center;
+    position: relative;
+    z-index: 1;
+    @include xxxl-up {
+        height: 90rem;
+    }
+    // White Gradient
+    &::before {
+        content: '';
+        height: 60%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.9) 35%, rgba(255,255,255,0) 100%);
+    }
+}

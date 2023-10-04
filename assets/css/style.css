@@ -29,7 +29,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Verdana";
 }
 
 p {
@@ -89,27 +89,27 @@ h4 a:hover {
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 5.2rem;
 }
 
 h2 {
-  font-size: 6.4rem;
+  font-size: 4.4rem;
 }
 
 h3 {
-  font-size: 5rem;
+  font-size: 3.6rem;
 }
 
 h4 {
-  font-size: 3.78rem;
+  font-size: 3rem;
 }
 
 h5 {
-  font-size: 2.84rem;
+  font-size: 2.4rem;
 }
 
 h6 {
-  font-size: 2.13rem;
+  font-size: 1.6rem;
 }
 
 .font-thin {
@@ -389,7 +389,7 @@ textarea.form-control:focus {
 }
 @media screen and (min-width: 1900px) {
   .container {
-    max-width: 1400px;
+    max-width: 1520px;
   }
 }
 
@@ -399,6 +399,116 @@ textarea.form-control:focus {
 /*--------------------------------------------------------------
 # Header-block
 --------------------------------------------------------------*/
+header {
+  padding: 1.5rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.3s ease;
+  z-index: 999999;
+}
+@media screen and (min-width: 768px) {
+  header {
+    padding: 2.5rem 0;
+  }
+}
+header .nav {
+  align-items: center;
+}
+header .site_logo img {
+  transition: all 0.3s;
+  max-width: 18rem;
+}
+@media screen and (max-width: 1399px) {
+  header .site_logo img {
+    max-width: 15rem;
+  }
+}
+header .main_menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+@media screen and (max-width: 991px) {
+  header .main_menu {
+    display: none;
+  }
+}
+header .main_menu li {
+  position: relative;
+}
+header .main_menu li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+}
+header .main_menu li .submenu {
+  position: absolute;
+  top: 100%;
+  padding: 1rem;
+  background-color: #A69380;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  transform: translateY(1rem);
+  opacity: 0;
+  visibility: hidden;
+}
+header .main_menu li .submenu li a {
+  white-space: nowrap;
+  color: #FFFFFF;
+  line-height: 1.57;
+  padding: 0.5rem;
+}
+header .main_menu li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+header .action_menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: 2rem;
+}
+@media screen and (max-width: 991px) {
+  header .action_menu {
+    margin-left: auto;
+  }
+}
+header .action_menu a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 0.5rem;
+}
+@media screen and (max-width: 767px) {
+  header .action_menu .login span {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .action_menu .lang-switch {
+    width: 3rem;
+  }
+}
+header .humbergar {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+}
+@media screen and (min-width: 992px) {
+  header .humbergar {
+    display: none;
+  }
+}
+header.sticky {
+  background-color: #FFFFFF;
+}
+
 /*--------------------------------------------------------------
     [ ## Page Banner]
 --------------------------------------------------------------*/
@@ -408,8 +518,60 @@ textarea.form-control:focus {
 /*--------------------------------------------------------------
 # Footer-block
 --------------------------------------------------------------*/
+footer .footer-top {
+  background-color: #210021;
+  padding: 6rem 0;
+}
+footer .footer-top .widget-title {
+  color: #89805D;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+footer .footer-top p, footer .footer-top address {
+  color: #A69380;
+}
+footer .footer-top ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+footer .footer-bottom {
+  background-color: #A69380;
+  padding: 2rem 0;
+}
+footer .footer-bottom p {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+footer .footer-bottom .footer-logo {
+  max-width: 15rem;
+}
+
 /*--------------------------------------------------------------
 # Home Page
 --------------------------------------------------------------*/
+.hero {
+  height: 70rem;
+  background-color: black;
+  background-size: cover;
+  background-position: bottom center;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (min-width: 1900px) {
+  .hero {
+    height: 90rem;
+  }
+}
+.hero::before {
+  content: "";
+  height: 60%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.9) 35%, rgba(255, 255, 255, 0) 100%);
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 html {
 	font-size: 58%;
 	-webkit-text-size-adjust: 100%;
-		
+	
 	@include md-up {
 		font-size: 60%;
 	}
@@ -15,7 +15,7 @@ body {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: 'Montserrat', sans-serif;
+	font-family: $font__vardana;
 }
 p { 
 	font-size: 1.6rem;

@@ -1,3 +1,115 @@
 /*--------------------------------------------------------------
 # Header-block
 --------------------------------------------------------------*/
+header {
+    padding: 1.5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all .3s ease;
+    z-index: 999999;
+    @include md-up {
+        padding: 2.5rem 0;
+    }
+
+    .nav {
+        align-items: center;
+    }
+    .site_logo {
+        img {
+            transition: all .3s;
+            max-width: 18rem;
+            @include xxl-down {
+                max-width: 15rem;
+            }
+        }
+    }
+    .main_menu {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        @include lg-down {
+            display: none;
+        }
+
+        li {
+            position: relative;
+            a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: .5rem;
+                padding: .8rem 1rem;
+            }
+            .submenu {
+                position: absolute;
+                top: 100%;
+                padding: 1rem;
+                background-color: $color__primary;
+                border-radius: .5rem;
+                transition: all .3s ease;
+                transform: translateY(1rem);
+                opacity: 0;
+                visibility: hidden;
+                li {
+                    a {
+                        white-space: nowrap;
+                        color: $color__white;
+                        line-height: 1.57;
+                        padding: .5rem;
+                    }
+                }
+            }
+
+            &:hover {
+                .submenu {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+    .action_menu {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-left: 2rem;
+
+        @include lg-down {
+            margin-left: auto;
+        }
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            padding: .8rem .5rem;
+        }
+        .login {
+            @include md-down {
+                span {
+                    display: none;
+                }
+            }
+        }
+        .lang-switch {
+            @include md-down {
+                width: 3rem;
+            }
+        }
+    }
+    .humbergar {
+        background-color: transparent;
+        padding: 0;
+        border: 0;
+        @include lg-up {
+            display: none;
+        }
+    }
+
+    &.sticky {
+        background-color: $color__white;
+    }
+}

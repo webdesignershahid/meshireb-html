@@ -1,3 +1,38 @@
 /*--------------------------------------------------------------
 # Footer-block
 --------------------------------------------------------------*/
+footer {
+    .footer-top {
+        background-color: $color__secondary;
+        padding: 6rem 0;
+        .widget-title {
+            color: #89805D;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+        p, address {
+            color: #A69380;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            li {
+
+            }
+        }
+    }
+    .footer-bottom {
+        background-color: $color__primary;
+        padding: 2rem 0;
+        p {
+            color: $color__white;
+            font-size: 1.4rem;
+            font-weight: 300;
+        }
+        .footer-logo {
+            max-width: 15rem;
+        }
+    }
+}
