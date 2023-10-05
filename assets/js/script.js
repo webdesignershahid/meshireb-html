@@ -53,53 +53,39 @@
         /* Swiper Slider Init
         /* ============================================================ */
         swiperCarousel: function () {
-            var whychoose = $('.why-choose-us').length;
-            if(whychoose) {
-                const slider = document.querySelector('.image-slider');
-                const slides = document.querySelectorAll('.why-choose-us  .swiper-slide');
-                const navPoints = document.querySelectorAll('.nav-point');            
-                var whyChooseSlider = new Swiper(slider, {
-                    slidesPerView: 1,
-                    freeMode: false,
-                    effect: 'fade',
-                    loop: !1,
-                    autoplay: {
-                        delay: 5000,
+
+            ///============= Events Slider =============\\\
+            var EventsSlider = new Swiper ('.events-slider', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                freeMode: false,
+                loop: 1,
+                autoplay: {
+                    delay: 5000,
+                },
+                speed: 1000,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
                     },
-                    speed: 1000,
-                });
-                
-                // update navigation elements on slide change
-                whyChooseSlider.on('slideChange', () => {
-                    navPoints.forEach((item, index) => {
-                        if (index === whyChooseSlider.activeIndex) {
-                            item.classList.add('active');
-                        } else {
-                            item.classList.remove('active');
-                        }
-                    });
-                });
-    
-                //Slide to index according to 'data-index'
-                let activeSlide = 0;
-    
-                // set the initial state of the slider
-                slides[activeSlide].classList.add('active');
-                navPoints[activeSlide].classList.add('active');
-    
-                // add click event listeners to the navigation elements
-                navPoints.forEach((navPoint, index) => {
-                    navPoint.addEventListener('click', () => {
-                        slides[activeSlide].classList.remove('active');
-                        navPoints[activeSlide].classList.remove('active');
-    
-                        activeSlide = index;
-                        slides[activeSlide].classList.add('active');
-                        navPoints[activeSlide].classList.add('active');
-                        whyChooseSlider.slideTo(index);
-                    });
-                });
-            }
+                    992: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                },
+                navigation: {
+                    nextEl: '.events-slider .btn-next',
+                    prevEl: '.events-slider .btn-prev',
+                },
+                // pagination: {
+                //     el: '.testimonialCarousel .pagination',
+                //     clickable: 'true',
+                // }
+            });
         },
 
         /* ============================================================ */

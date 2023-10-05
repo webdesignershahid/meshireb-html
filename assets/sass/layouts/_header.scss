@@ -8,7 +8,7 @@ header {
     left: 0;
     width: 100%;
     transition: all .3s ease;
-    z-index: 999999;
+    z-index: 1024;
     @include md-up {
         padding: 2.5rem 0;
     }
