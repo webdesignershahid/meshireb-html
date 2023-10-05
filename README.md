@@ -1,2 +1,2 @@
 # meshireb-html
-live: https://msheireb-doha.netlify.app/
+live: https://webdesignershahid.github.io/meshireb-html/
