@@ -22,4 +22,19 @@
             font-size: 10rem;
         }
     }
+    .banner-title {
+        color: var(--color);
+        font-family: $font__enzo;
+        font-size: 4rem;
+        line-height: 1;
+        @include md-up {
+            font-size: 6rem;
+        }
+        @include xl-up {
+            font-size: 8rem;
+        }
+        @include xxl-up {
+            font-size: 10rem;
+        }
+    }
 }

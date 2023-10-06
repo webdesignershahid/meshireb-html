@@ -54,6 +54,18 @@
         /* ============================================================ */
         swiperCarousel: function () {
 
+            ///============= Hero Slider =============\\\
+            var EventsSlider = new Swiper ('.hero-slider', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                freeMode: false,
+                effect: 'fade',
+                loop: 1,
+                autoplay: {
+                    delay: 5000,
+                },
+                speed: 1500,
+            });
             ///============= Events Slider =============\\\
             var EventsSlider = new Swiper ('.events-slider', {
                 slidesPerView: 1,
@@ -113,6 +125,42 @@
                 //     clickable: 'true',
                 // }
             });
+            ///============= Leasing Blocs Slider =============\\\
+            var galleryThumbs = new Swiper ('.step7Slider_content', {
+                slidesPerView: 1,
+                loop: 1,
+                autoplay: false,
+                allowTouchMove: false,
+                loopedSlides: 7,
+                // reverseDirection: true
+                // effect: 'fade',
+            });
+
+            var sevenStepSlider = new Swiper ('.step7Slider_content_image', {
+                slidesPerView: 1,
+                loop: 1,
+                spaceBetween: 20,
+                allowTouchMove: false,
+                autoplay: false,
+                speed: 1000,
+                loopedSlides: 7,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                },
+                navigation: {
+                    nextEl: '.step7Slider_content_image .btn-next',
+                    prevEl: '.step7Slider_content_image .btn-prev',
+                },
+                
+            });
+            sevenStepSlider.controller.control = galleryThumbs;
+            galleryThumbs.controller.control = sevenStepSlider;
         },
 
         /* ============================================================ */

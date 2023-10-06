@@ -560,6 +560,27 @@ header.sticky {
     font-size: 10rem;
   }
 }
+.page_banner .banner-title {
+  color: var(--color);
+  font-family: "Enzo Offc";
+  font-size: 4rem;
+  line-height: 1;
+}
+@media screen and (min-width: 768px) {
+  .page_banner .banner-title {
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page_banner .banner-title {
+    font-size: 8rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .page_banner .banner-title {
+    font-size: 10rem;
+  }
+}
 
 /*--------------------------------------------------------------
     [ ## Footer ]
@@ -666,39 +687,41 @@ footer .footer-bottom .footer-logo {
 # Homepage Hero Section
 --------------------------------------------------------------*/
 .hero {
-  height: 45rem;
-  background-size: cover;
-  background-position: bottom center;
   position: relative;
   z-index: 1;
-}
-@media screen and (min-width: 576px) {
-  .hero {
-    height: 50rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .hero {
-    height: 60rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .hero {
-    height: 70rem;
-  }
-}
-@media screen and (min-width: 1900px) {
-  .hero {
-    height: 90rem;
-  }
 }
 .hero::before {
   content: "";
   height: 60%;
   width: 100%;
   position: absolute;
-  z-index: -1;
+  z-index: 2;
   background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.9) 35%, rgba(255, 255, 255, 0) 100%);
+}
+.hero .slide-bg {
+  height: 45rem;
+  background-size: cover;
+  background-position: bottom center;
+}
+@media screen and (min-width: 576px) {
+  .hero .slide-bg {
+    height: 50rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero .slide-bg {
+    height: 60rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero .slide-bg {
+    height: 70rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .hero .slide-bg {
+    height: 90rem;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1189,6 +1212,102 @@ footer .footer-bottom .footer-logo {
 }
 .leasing_blocks .leasing_blocks_item .figure:hover img {
   transform: scale(1.08) rotate(2deg);
+}
+
+.heritage_intro {
+  padding: 8rem 0;
+}
+.heritage_intro .title {
+  font-family: "Enzo Offc";
+  font-weight: 900;
+  font-size: 2.6rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+.heritage_intro p {
+  font-size: 1.8rem;
+  color: #210021;
+}
+
+.step7 .step_intro {
+  padding: 5rem 0;
+  background-color: rgba(97, 53, 28, 0.6);
+}
+.step7 .step_intro .title {
+  font-family: "Enzo Offc";
+  font-weight: 900;
+  font-size: 2.6rem;
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+}
+.step7 .step_intro p {
+  font-size: 1.8rem;
+  color: #DFDED9;
+}
+.step7 .step7_slider {
+  padding: 6rem 0;
+  overflow: hidden;
+}
+.step7 .step7_slider .section-title {
+  font-family: "Enzo Offc";
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 3rem;
+  color: #61351C;
+  font-weight: 300;
+}
+@media screen and (min-width: 768px) {
+  .step7 .step7_slider .section-title {
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .step7 .step7_slider .section-title {
+    font-size: 8rem;
+  }
+}
+.step7 .step7_slider .step7Slider_content {
+  max-width: 36rem;
+  margin-left: 0;
+}
+.step7 .step7_slider .step7Slider_content .slide_content {
+  direction: ltr;
+}
+.step7 .step7_slider .step7Slider_content .slide_content .title {
+  color: #61351C;
+  font-family: "Enzo Offc";
+  font-weight: 900;
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+.step7 .step7_slider .step7Slider_content .slide_content .description {
+  color: #210021;
+  font-size: 1.8rem;
+  line-height: 1.75;
+}
+.step7 .step7_slider .step7Slider_content_image {
+  width: 140%;
+}
+.step7 .step7_slider .slider-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 30rem;
+  margin-top: 2rem;
+}
+.step7 .step7_slider .slider-navigation button {
+  width: 4rem;
+  height: 4rem;
+  background-color: #89805D;
+  border-radius: 50%;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step7 .step7_slider .slider-navigation button svg {
+  width: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

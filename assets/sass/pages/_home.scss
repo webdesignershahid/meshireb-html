@@ -1,33 +1,36 @@
 /*--------------------------------------------------------------
 # Homepage Hero Section
 --------------------------------------------------------------*/
-.hero {
-    height: 45rem;
-    background-size: cover;
-    background-position: bottom center;
+.hero {    
     position: relative;
     z-index: 1;
-
-    @include sm-up {
-        height: 50rem;
-    }
-    @include lg-up {
-        height: 60rem;
-    }
-    @include xl-up {
-        height: 70rem;
-    }
-    @include xxxl-up {
-        height: 90rem;
-    }
     // White Gradient
     &::before {
         content: '';
         height: 60%;
         width: 100%;
         position: absolute;
-        z-index: -1;
+        z-index: 2;
         background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.9) 35%, rgba(255,255,255,0) 100%);
+    }
+
+    .slide-bg {
+        height: 45rem;
+        background-size: cover;
+        background-position: bottom center;
+        
+        @include sm-up {
+            height: 50rem;
+        }
+        @include lg-up {
+            height: 60rem;
+        }
+        @include xl-up {
+            height: 70rem;
+        }
+        @include xxxl-up {
+            height: 90rem;
+        }
     }
 }
 
