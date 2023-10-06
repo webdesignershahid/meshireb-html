@@ -1,0 +1,25 @@
+.page_banner {
+    padding: 13rem 0 5rem;
+    background-color: var(--bg_color);
+    overflow: hidden;
+    @include md-up {
+        padding: 15rem 0 5rem;
+    }
+
+    .xl_headeing {
+        color: #60545f;
+        font-weight: bold;
+        font-family: $font__enzo;
+        font-size: 4rem;
+        line-height: 1;
+        @include md-up {
+            font-size: 6rem;
+        }
+        @include xl-up {
+            font-size: 8rem;
+        }
+        @include xxl-up {
+            font-size: 10rem;
+        }
+    }
+}

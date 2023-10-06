@@ -30,6 +30,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Verdana";
+  background-color: #DFDED9;
 }
 
 p {
@@ -146,6 +147,10 @@ h6 {
 
 .font-black {
   font-weight: 900;
+}
+
+.bg-color-body {
+  background-color: #DFDED9;
 }
 
 /*-------------------------------------------------
@@ -428,11 +433,16 @@ header .site_logo img {
 header .main_menu {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.5rem;
 }
 @media screen and (max-width: 991px) {
   header .main_menu {
     display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .main_menu {
+    gap: 1.5rem;
   }
 }
 header .main_menu li {
@@ -444,6 +454,11 @@ header .main_menu li a {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.8rem 1rem;
+  color: #210021;
+  transition: all 0.3s ease;
+}
+header .main_menu li a:hover {
+  color: #89805D;
 }
 header .main_menu li .submenu {
   position: absolute;
@@ -485,7 +500,7 @@ header .action_menu a {
   gap: 0.5rem;
   padding: 0.8rem 0.5rem;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   header .action_menu .login span {
     display: none;
   }
@@ -506,12 +521,46 @@ header .humbergar {
   }
 }
 header.sticky {
-  background-color: #FFFFFF;
+  background-color: #DFDED9;
+  box-shadow: 0 0 1rem 0.5rem rgba(166, 147, 128, 0.2);
 }
 
 /*--------------------------------------------------------------
     [ ## Page Banner]
 --------------------------------------------------------------*/
+.page_banner {
+  padding: 13rem 0 5rem;
+  background-color: var(--bg_color);
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .page_banner {
+    padding: 15rem 0 5rem;
+  }
+}
+.page_banner .xl_headeing {
+  color: #60545f;
+  font-weight: bold;
+  font-family: "Enzo Offc";
+  font-size: 4rem;
+  line-height: 1;
+}
+@media screen and (min-width: 768px) {
+  .page_banner .xl_headeing {
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page_banner .xl_headeing {
+    font-size: 8rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .page_banner .xl_headeing {
+    font-size: 10rem;
+  }
+}
+
 /*--------------------------------------------------------------
     [ ## Footer ]
 --------------------------------------------------------------*/
@@ -618,7 +667,6 @@ footer .footer-bottom .footer-logo {
 --------------------------------------------------------------*/
 .hero {
   height: 45rem;
-  background-color: black;
   background-size: cover;
   background-position: bottom center;
   position: relative;
@@ -658,7 +706,6 @@ footer .footer-bottom .footer-logo {
 --------------------------------------------------------------*/
 .explore .explore-content {
   padding: 10rem 0 6rem;
-  background-color: #DFDED9;
 }
 .explore .explore-content h1 {
   font-family: "Enzo Offc";
@@ -768,7 +815,6 @@ footer .footer-bottom .footer-logo {
 # Homepage Events Section
 --------------------------------------------------------------*/
 .events {
-  background-color: #DFDED9;
   overflow: hidden;
 }
 .events .section-title {
@@ -787,7 +833,7 @@ footer .footer-bottom .footer-logo {
 .events .section-title .title {
   font-size: 4.5rem;
   font-family: "Enzo Offc";
-  color: #89805D;
+  color: .events .section-title .title color__primary__dark;
   line-height: 1;
 }
 @media screen and (min-width: 992px) {
@@ -941,7 +987,208 @@ footer .footer-bottom .footer-logo {
 }
 .events .all-events a:hover {
   background-color: #FFFFFF;
+  color: color__primary__dark;
+}
+
+.about_msheireb {
+  padding: 8rem 0;
+}
+.about_msheireb .title {
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 4rem;
+  font-family: "Enzo Offc";
+  color: #210021;
+}
+@media screen and (min-width: 576px) {
+  .about_msheireb .title {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about_msheireb .title {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .about_msheireb .title {
+    font-size: 2.6rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .about_msheireb .section-image img {
+    max-height: 50rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.about_msheireb .section-content {
+  padding: 3rem 0;
+}
+.about_msheireb .section-content p {
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 1400px) {
+  .about_msheireb .section-content p {
+    font-size: 1.8rem;
+  }
+}
+
+.key_figures {
+  background-color: #89805D;
+  padding: 8rem 0;
+  color: #FFFFFF;
+}
+.key_figures .section-title {
+  font-family: "Enzo Offc";
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .key_figures .section-title {
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .key_figures .section-title {
+    font-size: 8rem;
+  }
+}
+.key_figures ul li + li {
+  margin-top: 1.5rem;
+}
+@media screen and (min-width: 1200px) {
+  .key_figures ul li + li {
+    margin-top: 3rem;
+  }
+}
+.key_figures ul li .title {
+  font-weight: 600;
+  font-family: "Enzo Offc";
+  font-size: 2.2rem;
+}
+.key_figures ul li .desc {
+  max-width: 35rem;
+  line-height: 1.3;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 1200px) {
+  .key_figures ul li .desc {
+    font-size: 2rem;
+  }
+}
+
+.our_location {
+  padding: 8rem 0;
+}
+.our_location .section-title {
+  font-family: "Enzo Offc";
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 3rem;
   color: #89805D;
+}
+@media screen and (min-width: 768px) {
+  .our_location .section-title {
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .our_location .section-title {
+    font-size: 8rem;
+  }
+}
+.our_location p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  margin-top: 2rem;
+  color: #210021;
+}
+@media screen and (min-width: 1200px) {
+  .our_location p {
+    font-size: 1.8rem;
+  }
+}
+.our_location .button a {
+  display: inline-block;
+  border: 0.2rem solid #210021;
+  text-align: center;
+  padding: 1rem 3rem;
+  border-radius: 0.8rem;
+  color: #210021;
+  font-weight: 500;
+  font-size: 2.2rem;
+  transition: all 0.2s ease;
+}
+@media screen and (max-width: 991px) {
+  .our_location .button a {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .our_location .button a {
+    font-size: 2.4rem;
+    padding: 1.2rem 3rem;
+  }
+}
+.our_location .button a:hover {
+  background-color: #210021;
+  color: #FFFFFF;
+}
+.our_location .embeded_map {
+  height: 100%;
+  width: 100%;
+  min-height: 40rem;
+}
+
+.leasing_blocks {
+  padding: 8rem 0;
+  position: relative;
+  z-index: 1;
+}
+.leasing_blocks::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background-color: #210021;
+  z-index: -1;
+}
+.leasing_blocks .leasing_blocks_item {
+  max-width: 44rem;
+  margin: 0 auto;
+}
+.leasing_blocks .leasing_blocks_item .figure {
+  position: relative;
+  overflow: hidden;
+}
+.leasing_blocks .leasing_blocks_item .figure .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 3rem;
+  font-size: 3.6rem;
+  color: #FFFFFF;
+  font-family: "Enzo Offc";
+  font-weight: bold;
+  filter: drop-shadow(0 0 0.5rem rgba(33, 0, 33, 0.75));
+}
+@media screen and (max-width: 991px) {
+  .leasing_blocks .leasing_blocks_item .figure .caption {
+    font-size: 2.5rem;
+  }
+}
+.leasing_blocks .leasing_blocks_item .figure img {
+  transition: all 0.4s linear;
+}
+.leasing_blocks .leasing_blocks_item .figure:hover img {
+  transform: scale(1.08) rotate(2deg);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -86,6 +86,33 @@
                 //     clickable: 'true',
                 // }
             });
+            ///============= Leasing Blocs Slider =============\\\
+            var leasingBlockSlider = new Swiper ('.leasing_block_slider', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: 1,
+                autoplay: {
+                    delay: 5000,
+                },
+                speed: 1000,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                },
+                // navigation: {
+                //     nextEl: '.events-slider .btn-next',
+                //     prevEl: '.events-slider .btn-prev',
+                // },
+                // pagination: {
+                //     el: '.testimonialCarousel .pagination',
+                //     clickable: 'true',
+                // }
+            });
         },
 
         /* ============================================================ */

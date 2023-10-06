@@ -28,9 +28,12 @@ header {
     .main_menu {
         display: flex;
         align-items: center;
-        gap: 1.5rem;
+        gap: .5rem;
         @include lg-down {
             display: none;
+        }
+        @include xl-up {
+            gap: 1.5rem;
         }
 
         li {
@@ -41,6 +44,11 @@ header {
                 justify-content: center;
                 gap: .5rem;
                 padding: .8rem 1rem;
+                color: $color__secondary;
+                transition: all .3s ease;
+                &:hover {
+                    color: $color__primary__dark;
+                }
             }
             .submenu {
                 position: absolute;
@@ -88,7 +96,7 @@ header {
             padding: .8rem .5rem;
         }
         .login {
-            @include md-down {
+            @include xl-down {
                 span {
                     display: none;
                 }
@@ -110,6 +118,7 @@ header {
     }
 
     &.sticky {
-        background-color: $color__white;
+        background-color: $bg_body;
+        box-shadow: 0 0 1rem .5rem rgba($color__primary, .2);
     }
 }
