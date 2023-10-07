@@ -2,7 +2,7 @@
     display: inline-block;
     position: fixed;
     inset: 0;
-    background: #a6a6a6;
+    background: $color__primary__dark;
     z-index: 1080;
     @include flex-center;
     .center {

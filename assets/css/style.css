@@ -278,7 +278,7 @@ textarea.form-control:focus {
   display: inline-block;
   position: fixed;
   inset: 0;
-  background: #a6a6a6;
+  background: #89805D;
   z-index: 1080;
   display: flex;
   align-items: center;
