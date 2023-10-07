@@ -28,7 +28,15 @@
                 // });
             
             };
-            mobile_menu('.navbar-toggler, .close-menu', '.mobile-menu');  
+            mobile_menu('.humbergar, .close-menu', '.mobile-menu');  
+
+            $(document).ready(function(){
+                $('.mobile-menu .main-menu .submenu').addClass('collapse');
+                $('.mobile-menu .menu-item-has-children > a').on('click', function(){
+                    $(this).parent().siblings('li').find('.collapse').collapse('hide');
+                    $(this).siblings('.submenu').collapse('toggle');
+                });
+            })
         },
         
         /* ============================================================ */
@@ -148,14 +156,6 @@
                         spaceBetween: 30,
                     },
                 },
-                // navigation: {
-                //     nextEl: '.events-slider .btn-next',
-                //     prevEl: '.events-slider .btn-prev',
-                // },
-                // pagination: {
-                //     el: '.testimonialCarousel .pagination',
-                //     clickable: 'true',
-                // }
             });
             ///============= Leasing Blocs Slider =============\\\
             var galleryThumbs = new Swiper ('.step7Slider_content', {
@@ -164,8 +164,6 @@
                 autoplay: false,
                 allowTouchMove: false,
                 loopedSlides: 7,
-                // reverseDirection: true
-                // effect: 'fade',
             });
 
             var sevenStepSlider = new Swiper ('.step7Slider_content_image', {
@@ -199,7 +197,13 @@
         /* Scroll Top
         /* ============================================================ */
         scroll_to_top: function() {
-            $('body').append("<a href='#' title='Scroll Top' id='scroll-top' class='topbutton btn-hide'><i class='fal fa-angle-double-up'></i></a>");
+            $('body').append(`
+                <a href='#' title='Scroll Top' id='scroll-top' class='topbutton btn-hide'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16">
+                        <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                    </svg>
+                </a>
+            `);
             var $scrolltop = $('#scroll-top');
             $(window).on('scroll', function () {
                 if ($(this).scrollTop() > $(this).height()) {
@@ -232,13 +236,6 @@
 
 })(jQuery);
     
-
-///============= Wow JS =============\\\
-wow = new WOW({
-    mobile: false,
-});
-wow.init();
- 
 
 /* ============================================================ */
 /* PRELOADER

@@ -10,6 +10,9 @@
         @include xxl-up {
             font-size: 2.6rem;
         }
+        @include xxxl-up {
+            font-size: 2.8rem;
+        }
     }
 
     p {
@@ -17,6 +20,9 @@
         color: $color__secondary;
         @include xl-down {
             font-size: 1.6rem;
+        }
+        @include xxxl-up {
+            font-size: 2rem;
         }
     }
 }
@@ -34,6 +40,9 @@
             @include xxl-up {
                 font-size: 2.6rem;
             }
+            @include xxxl-up {
+                font-size: 2.8rem;
+            }
         }
         p {
             font-size: 1.8rem;
@@ -41,6 +50,9 @@
 
             @include xl-down {
                 font-size: 1.6rem;
+            }
+            @include xxxl-up {
+                font-size: 2rem;
             }
         }
     }
@@ -90,6 +102,9 @@
 
                     @include xl-down {
                         font-size: 1.6rem;
+                    }
+                    @include xxxl-up {
+                        font-size: 2rem;
                     }
                 }
             }
@@ -150,11 +165,19 @@
                 border: 0;
                 @include flex-center;
                 transition: all .3s ease;
+
+                @include xxxl-up {
+                    width: 5rem;
+                    height: 5rem;
+                }
                 &:hover {
                     background-color: $color__secondary;
                 }
                 svg {
                     width: 2rem;
+                    @include xxxl-up {
+                        width: 3rem;
+                    }
                 }
             }
         }

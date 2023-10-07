@@ -17,6 +17,9 @@
         @include xxl-up {
             font-size: 2.6rem;
         }
+        @include xxxl-up {
+            font-size: 2.8rem;
+        }
     }
     .section-image {
         img {
@@ -37,6 +40,9 @@
             @include xxl-up {
                 font-size: 1.8rem;
             }
+            @include xxxl-up {
+                font-size: 2rem;
+            }
         }
     }
 }
@@ -45,6 +51,9 @@
     background-color: $color__primary__dark;
     padding: 8rem 0;
     color: $color__white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 
     .section-title {
         font-family: $font__enzo;
@@ -71,6 +80,9 @@
                 font-weight: 600;
                 font-family: $font__enzo;
                 font-size: 2.2rem;
+                @include xxxl-up {
+                    font-size: 2.6rem;
+                }
             }
             .desc {
                 max-width: 35rem;
@@ -79,6 +91,48 @@
                 @include xl-up {
                     font-size: 2rem;
                 }
+                @include xxxl-up {
+                    max-width: 42rem;
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+
+    .shapes {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        opacity: .5;
+        img {
+            position: absolute;
+            width: 40rem;
+            transform: rotate(45deg);
+        }
+        .shape1 {
+            bottom: 90%;
+            left: 40%;
+            @include md-up {
+                left: 60%;
+                bottom: 75%;
+            }
+            @include xl-up {
+                left: 70%;
+            }
+            @include xxl-up {
+                left: 75%;
+            }
+        }
+        .shape2 {
+            right: 70%;
+            top: 90%;
+            @include md-up {
+                right: 85%;
+                top: 70%;
+            }
+            @include xxl-up {
+                right: 90%;
+                top: 75%;
             }
         }
     }
@@ -108,6 +162,9 @@
         @include xl-up {
             font-size: 1.8rem;
         }
+        @include xxxl-up {
+            font-size: 2rem;
+        }
     }
     .button {
         a {
@@ -123,10 +180,13 @@
             @include lg-down {
                 font-size: 1.6rem;
             }
-
             @include xxl-up {
                 font-size: 2.4rem;
                 padding: 1.2rem 3rem;
+            }
+            @include xxxl-up {
+                font-size: 2.8rem;
+                padding: 1.5rem 4rem;
             }
 
             &:hover {
@@ -161,7 +221,6 @@
     }
 
     .leasing_blocks_item {
-        max-width: 44rem;
         margin: 0 auto;
         .figure {
             position: relative;

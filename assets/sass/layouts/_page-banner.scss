@@ -2,6 +2,8 @@
     padding: 13rem 0 5rem;
     background-color: var(--bg_color);
     overflow: hidden;
+    position: relative;
+    z-index: 1;
     @include md-up {
         padding: 15rem 0 5rem;
     }
@@ -36,5 +38,64 @@
         @include xxl-up {
             font-size: 10rem;
         }
+    }
+    .shapes {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+
+        img {
+            position: absolute;
+            right: -2rem;
+            width: 40rem;
+            top: -10%;
+            @include md-up {
+                width: 50rem;
+                top: -25%;
+            }
+            @include xl-up {
+                width: 65rem;
+                top: -40%;
+            }
+            @include xxxl-up {
+                width: 75rem;
+                top: -45%;
+            }
+        }
+    }
+    &.heritage {
+    }    
+    &.about {
+        .shapes {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            opacity: .5;
+            img {
+                position: absolute;
+                width: 40rem;
+                transform: rotate(45deg);
+            }
+            .shape1 {
+                bottom: 35%;
+                left: 60%;
+                @include md-up {
+                    left: 70%;
+                }
+            }
+            .shape2 {
+                right: 75%;
+                top: 60%;
+                @include md-up {
+                    right: 85%;
+                    top: 70%;
+                }
+                @include xxl-up {
+                    right: 90%;
+                    top: 65%;
+                }
+            }
+        }
+
     }
 }

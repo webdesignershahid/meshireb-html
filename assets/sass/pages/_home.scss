@@ -39,9 +39,12 @@
 # Homepage Facilities Section
 --------------------------------------------------------------*/
 .explore {
+    overflow: hidden;
     .explore-content {
         padding: 10rem 0 6rem;
-
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
         h1 {
             font-family: $font__enzo;
             color: #5E3666;
@@ -67,7 +70,40 @@
             @include lg-up {
                 max-width: 95%;
                 font-size: 1.9rem;
+            }
+            @include xxxl-up {
+                font-size: 2.2rem;
+            }
+        }
 
+        .shapes {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            opacity: .5;
+            img {
+                position: absolute;
+            }
+            .shape1 {
+                right: -15rem;
+                top: -20rem;
+                transform: rotate(45deg);
+                width: 32rem;
+
+                @include xl-up {
+                    top: -26rem;
+                    width: 40rem;
+                }
+                @include xxl-up {
+                    top: -32rem;
+                    width: 50rem;
+                }
+            }
+            .shape2 {
+                top: 60%;
+                right: 90%;
+                transform: rotate(45deg);
+                width: 50rem;
             }
         }
     }
@@ -149,7 +185,7 @@
         .title {
             font-size: 4.5rem;
             font-family: $font__enzo;
-            color: &color__primary__dark;
+            color: $color__primary__dark;
             line-height: 1;
             @include lg-up {
                 font-size: 6rem;
@@ -186,6 +222,10 @@
             @include lg-up {
                 top: calc(50% - 6.5rem);
             }
+            @include xxxl-up {
+                width: 5rem;
+                height: 5rem;
+            }
 
             &:hover {
                 background-color: #5E3666;
@@ -202,6 +242,9 @@
             }
             svg {
                 width: 2rem;
+                @include xxxl-up {
+                    width: 3rem;
+                }
             }
         }
     }
@@ -228,6 +271,10 @@
                 width: 100%;
                 object-fit: cover;
                 object-position: center;
+
+                @include xxxl-up {
+                    max-height: 50rem;
+                }
             }
         }
         .event-information {
@@ -257,6 +304,18 @@
                 }
                 @include xxl-up {
                     font-size: 3rem;
+                }
+                @include xxxl-up {
+                    font-size: 4rem;
+                }
+            }
+            p {
+                font-size: 1.6rem;
+                @include xxl-up {
+                    font-size: 1.8rem;
+                }
+                @include xxxl-up {
+                    font-size: 2rem;
                 }
             }
         }
@@ -290,10 +349,14 @@
             @include lg-down {
                 font-size: 1.6rem;
             }
+            @include xxxl-up {
+                font-size: 2.2rem;
+                padding: 1.3rem 4rem;
+            }
 
             &:hover {
                 background-color: $color__white;
-                color: color__primary__dark;
+                color: $color__primary__dark;
             }
         }
     }

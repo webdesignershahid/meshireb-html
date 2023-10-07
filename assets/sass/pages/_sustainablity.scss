@@ -1,0 +1,162 @@
+.sustainability_intro {
+    padding: 8rem 0;
+
+    .title {
+        font-family: $font__enzo;
+        font-weight: 900;
+        font-size: 2rem;
+        color: var(--text-color);
+        margin-bottom: 2rem;
+        line-height: 1.5;
+        @include xxl-up {
+            font-size: 2.4rem;
+        }
+        @include xxxl-up {
+            font-size: 2.8rem;
+        }
+    }
+
+    p {
+        font-size: 1.8rem;
+        color: $color__secondary;
+        @include xl-down {
+            font-size: 1.6rem;
+        }
+        @include xxxl-up {
+            font-size: 2rem;
+        }
+    }
+
+    .row {
+        --bs-gutter-x: 4rem;
+        --bs-gutter-y: 4rem;
+        
+        @include xl-up {
+            --bs-gutter-x: 6rem;
+        }
+    }
+    .video-player {
+        position: relative;
+
+        img {
+            min-height: 30rem;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .btn-play {
+            border: 0;
+            background-color: transparent;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            svg {
+                width: 4rem;
+
+                @include lg-up {
+                    width: 6rem;
+                }
+                @include xxl-up {
+                    width: 8rem;
+                }
+            }
+        }
+    }
+}
+
+.sustainability_map {
+    padding: 8rem 0;
+    background-color: #D5CDC4;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    .row {
+        --bs-gutter-x: 3rem;
+        --bs-gutter-y: 3rem;
+        
+        @include xl-up {
+            --bs-gutter-x: 6rem;
+        }
+    }
+    .title {
+        font-family: $font__enzo;
+        font-weight: 900;
+        font-size: 2rem;
+        color: var(--text-color);
+        margin-bottom: 2rem;
+        line-height: 1.5;
+        @include xxl-up {
+            font-size: 2.4rem;
+        }
+        @include xxxl-up {
+            font-size: 2.8rem;
+        }
+    }
+
+    p {
+        font-size: 1.8rem;
+        color: $color__secondary;
+        @include xl-down {
+            font-size: 1.6rem;
+        }
+        @include xxxl-up {
+            font-size: 2rem;
+        }
+    }
+}
+
+.Sustainability_facts  {
+    padding: 8rem 0;
+
+    .section-title {
+        font-family: $font__enzo;
+        font-size: 4rem;
+        line-height: 1;
+        margin-bottom: 3rem;
+        color: $color__primary__dark;
+
+        @include md-up {
+            font-size: 6rem;
+        }
+        @include xl-up {
+            font-size: 8rem;
+        }
+    }
+    .section-content {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 3rem ;
+            @include md-up {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            @include xl-up {
+                gap: 3rem 6rem;
+            }
+
+            li {
+                display: flex;
+                align-items: start;
+                gap: 2rem;
+                font-size: 1.6rem;
+                color: $color__secondary;
+                @include xl-up {
+                    font-size: 1.8rem;
+                }
+                @include xxl-up {
+                    font-size: 2rem;
+                }
+                img {
+                    width: 4rem;
+                    margin-top: .5rem;
+
+                    @include xl-up {
+                        width: 5rem;
+                    }
+                }
+            }
+        }
+    }
+}

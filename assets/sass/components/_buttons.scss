@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 3rem;
     right: 3rem;
-    background-color: var(--color__theme);
+    background-color: $color__primary__dark;
     width: 5rem;
     height: 5rem;
     @include flex-center;
@@ -12,6 +12,7 @@
     border-radius: .5rem;
     opacity: 0;
     visibility: hidden;
+    z-index: 9999;
 
     &.btn-show {
         visibility: visible;

@@ -12,8 +12,13 @@
     }
     p {
         line-height: 1.5;
+        font-size: 1.8rem;
         @include lg-down {
             text-align: center;
+            font-size: 1.6rem;
+        }
+        @include xxxl-up {
+            font-size: 2rem;
         }
     }
     .button {
@@ -31,7 +36,9 @@
             
             @include xl-up {
                 font-size: 2rem;
-
+            }
+            @include xxxl-up {
+                font-size: 2.2rem;
             }
 
             &:hover {
@@ -49,15 +56,57 @@ footer {
             color: #89805D;
             margin-bottom: 1rem;
             font-weight: bold;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
+            @include xxxl-up {
+                font-size: 1.8rem;
+            }
+            a {
+                @include xxxl-up {
+                    font-size: 1.8rem;
+                }
+            }
         }
         p, address {
             color: #A69380;
+            font-size: 1.6rem;
+            @include xxxl-up {
+                font-size: 1.8rem;
+            }
+
+            a {
+                font-size: 1.6rem;
+                @include xxxl-up {
+                    font-size: 1.8rem;
+                }
+            }
         }
         ul {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.2rem;
+        }
+        .social_contacts {
+            margin-top: 1.5rem;
+            a {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                border: .1rem solid $color__primary;
+                @include flex-center;
+                transition: all .2s;
+                path {
+                    transition: all .2s;
+                }
+                &:hover {
+                    background-color: $color__primary;
+
+                    svg {
+                        path {
+                            stroke: $color__secondary;
+                        }
+                    }
+                }
+            }
         }
     }
     .footer-bottom {
@@ -67,6 +116,10 @@ footer {
             color: $color__white;
             font-size: 1.4rem;
             font-weight: 300;
+
+            @include xxl-up {
+                font-size: 1.6rem;
+            }
         }
         [class*=start] {
             .footer-logo {

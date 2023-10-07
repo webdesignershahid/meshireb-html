@@ -49,6 +49,11 @@ header {
                 padding: .8rem 1rem;
                 color: $color__secondary;
                 transition: all .3s ease;
+                font-size: 1.6rem;
+
+                @include xxxl-up {
+                    font-size: 1.8rem;
+                }
                 &:hover {
                     color: $color__primary__dark;
                 }
@@ -97,6 +102,11 @@ header {
             justify-content: center;
             gap: .5rem;
             padding: .8rem .5rem;
+            font-size: 1.6rem;
+
+            @include xxxl-up {
+                font-size: 1.8rem;
+            }
         }
         .login {
             @include xl-down {
@@ -124,4 +134,129 @@ header {
         background-color: $bg_body;
         box-shadow: 0 0 1rem .5rem rgba($color__primary, .2);
     }
+}
+
+
+.mobile-menu {
+    @include lg-up {
+        display: none;
+    }
+    position: fixed;
+    top: 0;
+    left: -35rem;
+    width: 35rem;
+    height: 100%;
+    background-color: $color__white;
+    box-shadow: 0 0 .8rem 0 rgba($color__primary, 0.1);
+    transition: all 0.3s;
+    overflow-y: scroll;
+    z-index: 1025;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    .site-brand {
+        padding: 1rem 0;
+    }
+    .navbar-brand {
+        padding: 2rem 0 !important;
+        img {
+            max-width: 15rem;
+        }
+    }
+    form {
+        input {
+            border: 0;
+            font-size: 1.5rem;
+            color: $color__secondary;
+            padding: 0;
+            height: 3rem;
+            transition: all 0.2s;
+
+            &::placeholder {
+                color: $color__secondary;
+            }
+            &:-webkit-autofill {
+                box-shadow: 0 0 0 100rem $color__white inset;
+                -webkit-box-shadow: 0 0 0 100rem $color__white inset;
+                -webkit-text-fill-color: $color__black !important;
+            }
+            &:-webkit-autofill:focus {
+                box-shadow: 0 0 0 100rem $color__white inset;
+                -webkit-box-shadow: 0 0 0 100rem $color__white inset;
+                -webkit-text-fill-color: $color__black !important;
+            }
+        }
+    }
+    .menu-title {
+        border-bottom: .1rem solid $color__primary;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+    }
+    .main-menu {
+        li {
+            margin: .8rem 0;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 1.6rem;
+                padding: .8rem 0;
+                font-weight: 500;
+                font-family: $font__vardana;
+            }
+            &.menu-item-has-children {
+                > a {
+                    &::after {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: .7rem .7rem 0 .7rem;
+                        border-color: $color__primary__dark transparent transparent transparent;
+                    }
+                }
+            }
+        }
+        .submenu {
+            margin-left: 2rem;
+            li {
+                margin: 0;
+            }
+            a {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .social_contacts {
+        @include flex-center;
+        margin-top: 1.5rem;
+        gap: 1.5rem;
+        background-color: rgba( $color__primary__dark, .1 );
+        padding: 1.5rem 2rem;
+        margin-top: auto;
+        a {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            border: .1rem solid $color__primary;
+            @include flex-center;
+            transition: all .2s;
+            path {
+                transition: all .2s;
+            }
+            &:hover {
+                background-color: $color__primary;
+
+                svg {
+                    path {
+                        stroke: $color__secondary;
+                    }
+                }
+            }
+           
+        }
+    }
+    &.sidemenu-open {
+        left: 0;
+    }    
 }
