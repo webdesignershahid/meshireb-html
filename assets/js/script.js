@@ -47,6 +47,38 @@
                 }
             });
         },
+        /* ============================================================ */
+        /* Magnific Popup
+        /* ============================================================ */
+        magnific_popup: function() {
+            // Popup Image
+            /* 
+            $('.popup').magnificPopup({
+                delegate: '.zoom', // the selector for gallery item
+                type: 'image',
+                removalDelay: 300,
+                mainClass: 'mfp-fade',
+                image: {
+                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                    titleSrc: function(item) {
+                        return item.el.attr('title');
+                    }
+               }
+            });
+            */
+
+            $('.popup-youtube').each(function() { 
+                // the containers for all your galleries
+                $(this).magnificPopup({
+                    disableOn: 700,
+                    type: 'iframe',
+                    mainClass: 'mfp-fade',
+                    // removalDelay: 160,
+                    // preloader: false,
+                    // fixedContentPos: false,
+                });
+            }); 
+        },
 
 
         /* ============================================================ */
@@ -191,6 +223,7 @@
 			meshireb.scroll_to_top();
 			meshireb.sticky_header();
 			meshireb.swiperCarousel();
+			meshireb.magnific_popup();
 		}
     };
     $(function() {

@@ -445,6 +445,11 @@ header .main_menu {
     gap: 1.5rem;
   }
 }
+@media screen and (min-width: 1400px) {
+  header .main_menu {
+    gap: 2rem;
+  }
+}
 header .main_menu li {
   position: relative;
 }
@@ -563,7 +568,7 @@ header.sticky {
 .page_banner .banner-title {
   color: var(--color);
   font-family: "Enzo Offc";
-  font-size: 4rem;
+  font-size: 5rem;
   line-height: 1;
 }
 @media screen and (min-width: 768px) {
@@ -1220,37 +1225,57 @@ footer .footer-bottom .footer-logo {
 .heritage_intro .title {
   font-family: "Enzo Offc";
   font-weight: 900;
-  font-size: 2.6rem;
+  font-size: 2rem;
   color: var(--text-color);
   margin-bottom: 2rem;
+}
+@media screen and (min-width: 1400px) {
+  .heritage_intro .title {
+    font-size: 2.6rem;
+  }
 }
 .heritage_intro p {
   font-size: 1.8rem;
   color: #210021;
 }
+@media screen and (max-width: 1199px) {
+  .heritage_intro p {
+    font-size: 1.6rem;
+  }
+}
 
 .step7 .step_intro {
-  padding: 5rem 0;
+  padding: 6rem 0;
   background-color: rgba(97, 53, 28, 0.6);
 }
 .step7 .step_intro .title {
   font-family: "Enzo Offc";
   font-weight: 900;
-  font-size: 2.6rem;
+  font-size: 2rem;
   color: #FFFFFF;
   margin-bottom: 2rem;
+}
+@media screen and (min-width: 1400px) {
+  .step7 .step_intro .title {
+    font-size: 2.6rem;
+  }
 }
 .step7 .step_intro p {
   font-size: 1.8rem;
   color: #DFDED9;
 }
+@media screen and (max-width: 1199px) {
+  .step7 .step_intro p {
+    font-size: 1.6rem;
+  }
+}
 .step7 .step7_slider {
-  padding: 6rem 0;
+  padding: 8rem 0;
   overflow: hidden;
 }
 .step7 .step7_slider .section-title {
   font-family: "Enzo Offc";
-  font-size: 4rem;
+  font-size: 5rem;
   line-height: 1;
   margin-bottom: 3rem;
   color: #61351C;
@@ -1261,13 +1286,24 @@ footer .footer-bottom .footer-logo {
     font-size: 6rem;
   }
 }
+@media screen and (min-width: 992px) {
+  .step7 .step7_slider .section-title {
+    max-width: 60%;
+  }
+}
 @media screen and (min-width: 1200px) {
   .step7 .step7_slider .section-title {
+    font-size: 7rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .step7 .step7_slider .section-title {
     font-size: 8rem;
+    margin-bottom: 4rem;
   }
 }
 .step7 .step7_slider .step7Slider_content {
-  max-width: 36rem;
+  max-width: 40rem;
   margin-left: 0;
 }
 .step7 .step7_slider .step7Slider_content .slide_content {
@@ -1277,7 +1313,7 @@ footer .footer-bottom .footer-logo {
   color: #61351C;
   font-family: "Enzo Offc";
   font-weight: 900;
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
 }
 .step7 .step7_slider .step7Slider_content .slide_content .description {
@@ -1285,16 +1321,72 @@ footer .footer-bottom .footer-logo {
   font-size: 1.8rem;
   line-height: 1.75;
 }
+@media screen and (max-width: 1199px) {
+  .step7 .step7_slider .step7Slider_content .slide_content .description {
+    font-size: 1.6rem;
+  }
+}
 .step7 .step7_slider .step7Slider_content_image {
-  width: 140%;
+  align-items: center;
+  user-select: none;
+}
+@media screen and (min-width: 768px) {
+  .step7 .step7_slider .step7Slider_content_image {
+    width: 170%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .step7 .step7_slider .step7Slider_content_image {
+    width: 130%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .step7 .step7_slider .step7Slider_content_image {
+    width: 140%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .step7 .step7_slider .step7Slider_content_image {
+    width: 145%;
+  }
+}
+.step7 .step7_slider .step7Slider_content_image .swiper-slide {
+  opacity: 0.3;
+  transition: all 0.3s ease;
+  height: auto;
+  text-align: center;
+}
+.step7 .step7_slider .step7Slider_content_image .swiper-slide img {
+  transform: scaleY(0.8);
+  transition: transform 0.5s ease;
+}
+.step7 .step7_slider .step7Slider_content_image .swiper-slide-active {
+  opacity: 1;
+}
+.step7 .step7_slider .step7Slider_content_image .swiper-slide-active img {
+  transform: scaleY(1);
 }
 .step7 .step7_slider .slider-navigation {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  width: 30rem;
   margin-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .step7 .step7_slider .slider-navigation {
+    width: 30rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .step7 .step7_slider .slider-navigation {
+    width: 40rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .step7 .step7_slider .slider-navigation {
+    width: 45rem;
+  }
 }
 .step7 .step7_slider .slider-navigation button {
   width: 4rem;
@@ -1305,9 +1397,92 @@ footer .footer-bottom .footer-logo {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+}
+.step7 .step7_slider .slider-navigation button:hover {
+  background-color: #210021;
 }
 .step7 .step7_slider .slider-navigation button svg {
   width: 2rem;
+}
+
+.technology_intro {
+  padding: 8rem 0;
+}
+.technology_intro .title {
+  font-family: "Enzo Offc";
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 1400px) {
+  .technology_intro .title {
+    font-size: 2.6rem;
+  }
+}
+.technology_intro p {
+  font-size: 1.8rem;
+  color: #210021;
+}
+@media screen and (max-width: 1199px) {
+  .technology_intro p {
+    font-size: 1.6rem;
+  }
+}
+
+.technolgy_video {
+  padding: 8rem 0;
+  background-color: #D5CDC4;
+}
+.technolgy_video .row {
+  --bs-gutter-x: 4rem;
+  --bs-gutter-y: 4rem;
+}
+@media screen and (min-width: 1200px) {
+  .technolgy_video .row {
+    --bs-gutter-x: 6rem;
+  }
+}
+.technolgy_video .section-content {
+  font-size: 2rem;
+  color: #527B70;
+  font-family: "Enzo Offc";
+  font-weight: 900;
+}
+@media screen and (min-width: 1400px) {
+  .technolgy_video .section-content {
+    font-size: 3rem;
+  }
+}
+.technolgy_video .video-player {
+  position: relative;
+}
+.technolgy_video .video-player img {
+  min-height: 30rem;
+  width: 100%;
+  object-fit: cover;
+}
+.technolgy_video .video-player .btn-play {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.technolgy_video .video-player .btn-play svg {
+  width: 4rem;
+}
+@media screen and (min-width: 992px) {
+  .technolgy_video .video-player .btn-play svg {
+    width: 8rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .technolgy_video .video-player .btn-play svg {
+    width: 10rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
